@@ -1,3 +1,5 @@
+// fuck
+
 package FP;
 import java.awt.Color;
 
