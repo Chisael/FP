@@ -6,15 +6,21 @@ import java.awt.Color;
 public abstract class GridCell {
 	private int xPos, yPos;
 	private boolean searched;
-	private String terrainType;
-	private Color color;
+	protected Color color;
 	
 	public final int GRID_LENGTH = 10;
 	
-	public GridCell(){
-		
+	public GridCell() {
+		this.xPos = 0;
+		this.yPos = 0;
+		this.searched = false;
 	}
 	
+	public GridCell(int x, int y) {
+		this.xPos = x;
+		this.yPos = y;
+		this.searched = false;
+	}
 	public Boolean passableByHikers(){
 		return false;
 	}
@@ -52,14 +58,6 @@ public abstract class GridCell {
 
 	public void setSearched(boolean searched) {
 		this.searched = searched;
-	}
-
-	public String getTerrainType() {
-		return terrainType;
-	}
-
-	public void setTerrainType(String terrainType) {
-		this.terrainType = terrainType;
 	}
 
 	public Color getColor() {

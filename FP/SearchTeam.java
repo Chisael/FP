@@ -5,6 +5,10 @@ public abstract class SearchTeam {
 	private double xVelocity, yVelocity;
 	private Direction direction;
 	
+	public enum Direction {
+		NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST;
+	}
+
 	
 	public SearchTeam(){
 		
