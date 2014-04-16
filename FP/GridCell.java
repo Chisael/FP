@@ -27,7 +27,6 @@ public abstract class GridCell {
 	
 	public abstract char getInitial();
 	
-
 	public int getxPos() {
 		return xPos;
 	}
@@ -59,8 +58,4 @@ public abstract class GridCell {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-	
-	
-
-
 }

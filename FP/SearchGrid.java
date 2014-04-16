@@ -114,20 +114,15 @@ public class SearchGrid {
 									"Room not found in legend.");
 						}
 					}
-					switch (s) {
-					case "F":
-						gc = new ForestCell(rowTracker, columnTracker);
-						break;
-					case "G":
-						gc = new GroundCell(rowTracker, columnTracker);
-						break;
-					case "M":
-						gc = new MountainCell(rowTracker, columnTracker);
-						break;
-					case "W":
-						gc = new WaterCell(rowTracker, columnTracker);
-						break;
-					}
+					if (s.equals("F")) {
+            gc = new ForestCell(rowTracker, columnTracker);
+					} else if (s.equals("G")) {
+            gc = new GroundCell(rowTracker, columnTracker);
+					} else if (s.equals("M")) {
+            gc = new MountainCell(rowTracker, columnTracker);
+          } else if (s.equals("W")) {
+            gc = new WaterCell(rowTracker, columnTracker);
+          }
 					if (gc != null) {
 						cells.add(calcIndex(rowTracker, columnTracker), gc);
 					}
