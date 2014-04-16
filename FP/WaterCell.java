@@ -16,7 +16,21 @@ public class WaterCell extends GridCell{
 
 	@Override
 	public char getInitial() {
-		// TODO Auto-generated method stub
 		return 'W';
 	}
+
+  @Override
+  public boolean passableByHikers() {
+    return false;
+  }
+
+  @Override
+  public boolean passableByHelicopter() {
+    return true;
+  }
+
+  @Override
+  public boolean passableByDogs() {
+    return false;
+  }
 }

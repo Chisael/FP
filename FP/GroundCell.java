@@ -16,8 +16,22 @@ public class GroundCell  extends GridCell{
 
 	@Override
 	public char getInitial() {
-		// TODO Auto-generated method stub
 		return 'G';
 	}
+	
+	@Override
+	public boolean passableByHikers() {
+	  return true;
+	}
+
+  @Override
+  public boolean passableByHelicopter() {
+    return true;
+  }
+
+  @Override
+  public boolean passableByDogs() {
+    return true;
+  }
 
 }

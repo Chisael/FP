@@ -19,17 +19,11 @@ public abstract class GridCell {
 		this.yPos = y;
 		this.searched = false;
 	}
-	public Boolean passableByHikers(){
-		return false;
-	}
+	public abstract boolean passableByHikers();
 	
-	public Boolean passableByHelicopter(){
-		return false;
-	}
+	public abstract boolean passableByHelicopter();
 	
-	public Boolean passableByDogs(){
-		return false;
-	}
+	public abstract boolean passableByDogs();
 	
 	public abstract char getInitial();
 	

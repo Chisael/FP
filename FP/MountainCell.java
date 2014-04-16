@@ -16,7 +16,21 @@ public class MountainCell extends GridCell{
 
 	@Override
 	public char getInitial() {
-		// TODO Auto-generated method stub
 		return 'M';
 	}
+
+  @Override
+  public boolean passableByHikers() {
+    return true;
+  }
+
+  @Override
+  public boolean passableByHelicopter() {
+    return false;
+  }
+
+  @Override
+  public boolean passableByDogs() {
+    return true;
+  }
 }
