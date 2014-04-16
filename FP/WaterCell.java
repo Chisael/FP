@@ -13,4 +13,10 @@ public class WaterCell extends GridCell{
 		super(x,y);
 		this.color = Color.blue;
 	}
+
+	@Override
+	public char getInitial() {
+		// TODO Auto-generated method stub
+		return 'W';
+	}
 }

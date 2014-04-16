@@ -1,0 +1,4 @@
+W, Water
+F, Forest
+M, Mountain
+G, Ground

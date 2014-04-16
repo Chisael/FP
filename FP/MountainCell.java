@@ -13,4 +13,10 @@ public class MountainCell extends GridCell{
 		super(x,y);
 		this.color = Color.gray;
 	}
+
+	@Override
+	public char getInitial() {
+		// TODO Auto-generated method stub
+		return 'M';
+	}
 }

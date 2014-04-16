@@ -1,5 +1,3 @@
-// fuck
-
 package FP;
 import java.awt.Color;
 
@@ -33,7 +31,7 @@ public abstract class GridCell {
 		return false;
 	}
 	
-	
+	public abstract char getInitial();
 	
 
 	public int getxPos() {

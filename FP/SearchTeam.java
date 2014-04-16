@@ -9,9 +9,14 @@ public abstract class SearchTeam {
 		NORTH, SOUTH, EAST, WEST, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHWEST;
 	}
 
-	
 	public SearchTeam(){
-		
+		this.xPos = 0;
+		this.yPos = 0;
+	}
+	
+	public SearchTeam(int startX, int startY) {
+		this.xPos = startX;
+		this.yPos = startY;
 	}
 	
 	public void updateX(){
@@ -60,6 +65,26 @@ public abstract class SearchTeam {
 
 	public void setyVelocity(double yVelocity) {
 		this.yVelocity = yVelocity;
+	}
+
+	public Direction getDirection() {
+		return direction;
+	}
+
+	public boolean canSearchForest() {
+		return false;
+	}
+
+	public boolean canSearchGround() {
+		return false;
+	}
+
+	public boolean canSearchMountain() {
+		return false;
+	}
+
+	public boolean canSearchWater() {
+		return false;
 	}
 
 }

@@ -14,4 +14,10 @@ public class GroundCell  extends GridCell{
 		this.color = Color.orange;
 	}
 
+	@Override
+	public char getInitial() {
+		// TODO Auto-generated method stub
+		return 'G';
+	}
+
 }
