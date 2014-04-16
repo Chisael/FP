@@ -5,12 +5,11 @@ import static org.junit.Assert.*;
 import java.io.FileNotFoundException;
 import java.util.Map;
 
-import org.junit.BeforeClass;
+import org.junit.Before;
 import org.junit.Test;
 
 import FP.BadConfigFormatException;
 import FP.SearchGrid;
-import FP.SearchProgram;
 
 public class part1 {
 
@@ -20,9 +19,9 @@ public class part1 {
 	public static final int NUM_COLUMNS = 2;
 	public static final String layoutName = "SearchLayout.csv";
 	public static final String legendName = "SearchLegend.txt";
-
-	@BeforeClass
-	public static void setUp() throws FileNotFoundException, BadConfigFormatException {
+	
+	@Before
+	public void setUp() throws FileNotFoundException, BadConfigFormatException {
 		grid = new SearchGrid(layoutName, legendName);
 		grid.loadConfigFiles();
 	}
@@ -82,7 +81,7 @@ public class part1 {
 	@Test (expected = BadConfigFormatException.class)
 	public void testBadRoomFormat() throws BadConfigFormatException, FileNotFoundException {
 		// overloaded Board ctor takes config file name
-		SearchGrid grid = new SearchGrid("SearchLayout.csv", "SearchGridBadFormat.txt");
+		SearchGrid grid = new SearchGrid("SearchLayout.csv", "SearchLegendBadFormat.txt");
 		grid.loadLegendConfig();
 		grid.loadGridConfig();
 	}
